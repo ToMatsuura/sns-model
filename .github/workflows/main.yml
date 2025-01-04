@@ -1,1 +1,16 @@
+name: CI  
 
+on:   
+  push:  
+    branches:   
+      - main  
+
+jobs:  
+  build:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - name: コードをチェックアウト  
+        uses: actions/checkout@v2  
+      
+      - name: メッセージを出力  
+        run: echo "Hello, GitHub Actions!"
